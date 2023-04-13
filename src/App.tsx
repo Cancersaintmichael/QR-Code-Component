@@ -1,24 +1,23 @@
-import QrCodeImage from "./assets/image-qr-code.png";
+import QrCode from "./components/QrCode";
 
 function App() {
+  const content = [
+    {
+      id: 1,
+      title: "Improve your front-end skills by building projects",
+      description:
+        "Scan the QR code to visit Frontend Mentor and take your coding skills to the next level",
+    },
+  ];
   return (
     <>
-      <div className="bg-grayish-blue h-screen w-full flex flex-grow justify-center items-center">
-        <div className="bg-white shadow-lg rounded-[18px] p-4 flex flex-col gap-6">
-          <div className="rounded-[18px] overflow-hidden w-[300px]">
-            <img src={QrCodeImage} />
-          </div>
-          <div className="flex flex-col max-w-[260px] mx-auto text-center gap-4">
-            <h1 className="text-dark-blue font-bold text-[22px]">
-              Improve your front-end skills by building projects
-            </h1>
-            <p className="text-paragraph text-light-gray text-[15px] tracking-wide pb-6">
-              Scan the QR code to visit Frontend Mentor and take your coding
-              skills to the next level
-            </p>
-          </div>
-        </div>
-      </div>
+      {content.map((content) => (
+        <QrCode
+          key={content.id}
+          title={content.title}
+          description={content.description}
+        />
+      ))}
     </>
   );
 }
