@@ -4,10 +4,10 @@ export default {
   theme: {
     extend: {
       colors: {
-        white: "hsl(0, 0%, 100%)",
-        "light-gray": "hsl(212, 45%, 89%)",
+        white: "#ffffff",
+        "light-gray": "#848d97",
         "grayish-blue": "#d1e1ff",
-        "dark-blue": "hsl(218, 44%, 22%)",
+        "dark-blue": "#1f3251",
       },
     },
   },
